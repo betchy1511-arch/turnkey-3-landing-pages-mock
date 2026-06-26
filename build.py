@@ -43,13 +43,13 @@ PAGES = {
             ("Walk-In Tubs & Accessibility", "Low step-in, built-in seat, grab bars. Safer bathing for any age."),
         ],
         "sections": [
-            ("What we remodel", "We remodel bathrooms and only bathrooms: full bathroom remodels, shower installations, shower replacements, tub-to-shower conversions, bathtub replacements, walk-in tubs, and barrier-free showers. Because bathrooms are all we do, you get a team that knows waterproofing, ventilation, and fixture work, not a general contractor who treats your bathroom as a side job."),
-            ("Why New Orleans homeowners choose a specialist", "We are locally owned and have worked in homes from Lakeview to the Garden District, Metairie to Mandeville. We understand what older New Orleans homes and our humidity do to a bathroom, and we build with premium, American-made materials chosen to hold up in this climate. Every job is backed by a lifetime guarantee on acrylic products and a 10-year workmanship guarantee."),
-            ("Fixed-price quotes, no surprises", "Many contractors give a vague estimate and let the number creep. We do not. You get a fixed-price guaranteed quote before any work starts, so you know exactly what your remodel will cost. No change orders, no hidden fees, no bait-and-switch."),
-            ("Done in days, not weeks", "Most of our projects are completed in 1 to 3 days, and many in as little as a single day. You keep your home and your routine instead of living around a job site for weeks."),
-            ("Licensed, insured, and local", "TurnKey Bath Remodel is fully licensed and insured: Residential License #890459 and Commercial License #3667. We are lifelong members of this community, we answer our own phone, and we treat every project as if it were in our own home. That is part of how we earned a 4.9 Google rating and hundreds of five-star reviews from New Orleans neighbors."),
-            ("0% financing", "A new bathroom should fit your budget, not strain it. We offer 0% financing so you can move forward with flexible monthly payments."),
-            ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore."),
+            ("What we remodel", "We remodel bathrooms and only bathrooms: full bathroom remodels, shower installations, shower replacements, tub-to-shower conversions, bathtub replacements, walk-in tubs, and barrier-free showers. Because bathrooms are all we do, you get a team that knows waterproofing, ventilation, and fixture work, not a general contractor who treats your bathroom as a side job.", "images-finished-bath/IMG_3187.jpg"),
+            ("Why New Orleans homeowners choose a specialist", "We are locally owned and have worked in homes from Lakeview to the Garden District, Metairie to Mandeville. We understand what older New Orleans homes and our humidity do to a bathroom, and we build with premium, American-made materials chosen to hold up in this climate. Every job is backed by a lifetime guarantee on acrylic products and a 10-year workmanship guarantee.", "images-finished-bath/IMG_3186.jpg"),
+            ("Fixed-price quotes, no surprises", "Many contractors give a vague estimate and let the number creep. We do not. You get a fixed-price guaranteed quote before any work starts, so you know exactly what your remodel will cost. No change orders, no hidden fees, no bait-and-switch.", "images-finished-bath/PHOTO-2023-11-14-12-50-50_b.jpg"),
+            ("Done in days, not weeks", "Most of our projects are completed in 1 to 3 days, and many in as little as a single day. You keep your home and your routine instead of living around a job site for weeks.", "images-finished-bath/PHOTO-2023-11-14-12-51-01_e.jpg"),
+            ("Licensed, insured, and local", "TurnKey Bath Remodel is fully licensed and insured: Residential License #890459 and Commercial License #3667. We are lifelong members of this community, we answer our own phone, and we treat every project as if it were in our own home. That is part of how we earned a 4.9 Google rating and hundreds of five-star reviews from New Orleans neighbors.", "images-finished-bath/PHOTO-2023-11-14-12-51-01_c.jpg"),
+            ("0% financing", "A new bathroom should fit your budget, not strain it. We offer 0% financing so you can move forward with flexible monthly payments.", "images-finished-bath/PHOTO-2023-11-14-12-50-50_a.jpg"),
+            ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore.", "images-finished-bath/PHOTO-2023-11-14-12-50-49_a.jpg"),
         ],
         "faqs": [
             ("How much does a bathroom remodel cost in New Orleans?", "It depends on the size of the room, the materials you choose, and what your home needs behind the walls. Rather than guess, we give you a fixed-price guaranteed quote at your free consultation, and we offer 0% financing."),
@@ -77,14 +77,14 @@ PAGES = {
             ("Barrier-Free & Curbless", "Low or no thresholds, built-in seating, grab bars. Safer step-free entry."),
         ],
         "sections": [
-            ("Showers we install", "Walk-in showers with easy entry and a clean, open look. Shower replacements that swap a dated or leaking shower for a new system. Tub-to-shower conversions that turn an unused tub into a full walk-in shower. Barrier-free and curbless showers for safer, step-free entry. Walk-in showers with a built-in seat or bench."),
-            ("Tub-to-shower conversions", "A tub-to-shower conversion is one of the most-requested bathroom projects in New Orleans, and it is one of ours. We remove the old tub, handle the plumbing, and install a new walk-in shower sized to your bathroom, usually in 1 to 3 days. You get a fixed-price quote before we start."),
-            ("Built for New Orleans humidity", "Grout lines are where shower problems start in this climate: they trap moisture, grow mold, and need constant resealing. Our acrylic shower systems have no grout lines, so they stay cleaner with far less maintenance. We build with premium, American-made materials and back acrylic products with a lifetime guarantee."),
-            ("Safer, step-free options", "If you or someone in your home needs a safer shower, we install barrier-free and curbless showers with low or no thresholds, built-in seating, and grab bars. It is the same quality install, designed around easier, safer entry."),
-            ("Fixed-price quotes, no surprises", "Older New Orleans homes sometimes hide outdated plumbing behind the walls. We tell you what your project needs and give you a fixed-price guaranteed quote before any work begins. No surprise change orders, no hidden fees."),
-            ("Licensed, local, and guaranteed", "TurnKey Bath Remodel is locally owned and fully licensed and insured: Residential #890459, Commercial #3667. Every install is backed by a lifetime guarantee on acrylic and a 10-year workmanship guarantee, and it is part of why we hold a 4.9 Google rating with hundreds of five-star reviews."),
-            ("What a new shower costs", "The price of a walk-in shower or a tub-to-shower conversion depends on the size of your shower, the materials you choose, and any plumbing updates your home needs. We give you a fixed-price guaranteed quote at your free consultation, and we offer 0% financing so it fits your budget."),
-            ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore."),
+            ("Showers we install", "Walk-in showers with easy entry and a clean, open look. Shower replacements that swap a dated or leaking shower for a new system. Tub-to-shower conversions that turn an unused tub into a full walk-in shower. Barrier-free and curbless showers for safer, step-free entry. Walk-in showers with a built-in seat or bench.", "images-finished-bath/PHOTO-2023-11-14-12-50-53_a.jpg"),
+            ("Tub-to-shower conversions", "A tub-to-shower conversion is one of the most-requested bathroom projects in New Orleans, and it is one of ours. We remove the old tub, handle the plumbing, and install a new walk-in shower sized to your bathroom, usually in 1 to 3 days. You get a fixed-price quote before we start.", "images-finished-bath/PHOTO-2023-11-14-12-50-49_b.jpg"),
+            ("Built for New Orleans humidity", "Grout lines are where shower problems start in this climate: they trap moisture, grow mold, and need constant resealing. Our acrylic shower systems have no grout lines, so they stay cleaner with far less maintenance. We build with premium, American-made materials and back acrylic products with a lifetime guarantee.", "images-finished-bath/PHOTO-2023-11-14-12-51-00_a.jpg"),
+            ("Safer, step-free options", "If you or someone in your home needs a safer shower, we install barrier-free and curbless showers with low or no thresholds, built-in seating, and grab bars. It is the same quality install, designed around easier, safer entry.", "images-finished-bath/IMG_3184.jpg"),
+            ("Fixed-price quotes, no surprises", "Older New Orleans homes sometimes hide outdated plumbing behind the walls. We tell you what your project needs and give you a fixed-price guaranteed quote before any work begins. No surprise change orders, no hidden fees.", "images-finished-bath/PHOTO-2023-11-14-12-50-22_a.jpg"),
+            ("Licensed, local, and guaranteed", "TurnKey Bath Remodel is locally owned and fully licensed and insured: Residential #890459, Commercial #3667. Every install is backed by a lifetime guarantee on acrylic and a 10-year workmanship guarantee, and it is part of why we hold a 4.9 Google rating with hundreds of five-star reviews.", "images-finished-bath/PHOTO-2023-11-14-12-50-44.jpg"),
+            ("What a new shower costs", "The price of a walk-in shower or a tub-to-shower conversion depends on the size of your shower, the materials you choose, and any plumbing updates your home needs. We give you a fixed-price guaranteed quote at your free consultation, and we offer 0% financing so it fits your budget.", "images-finished-bath/PHOTO-2023-11-14-12-51-01_d.jpg"),
+            ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore.", "images-finished-bath/PHOTO-2023-11-14-12-50-28.jpg"),
         ],
         "faqs": [
             ("How much does a tub-to-shower conversion or walk-in shower cost in New Orleans?", "It depends on size, materials, and any plumbing work your home needs. You get a fixed-price guaranteed quote at your free consultation, with 0% financing available."),
@@ -112,14 +112,14 @@ PAGES = {
             ("Standard Bathtub Replacement", "Not a walk-in tub? We replace standard bathtubs too, with the same fixed-price quote."),
         ],
         "sections": [
-            ("Why a walk-in tub", "Most falls at home happen in the bathroom, and stepping over a high tub wall is one of the biggest risks. A walk-in tub replaces that step-over with a low, sealed door you walk through. Ours include a built-in seat, grab bars, anti-slip flooring, and easy-reach controls, so a bath is something to look forward to again, not something to fear."),
-            ("Add a shower to your walk-in tub", "Prefer the option to shower as well as soak? We install walk-in tubs with a shower, so you get both in one space. We will walk you through the choices at your free consultation."),
-            ("Made to fit older New Orleans homes", "New Orleans bathrooms, especially in older and historic homes, can be tight. Because we are local and remodel these homes every week, we measure and plan your walk-in tub around your actual space during the free in-home consultation, so you know it fits before anything is ordered."),
-            ("A local team, not a high-pressure national chain", "Walk-in tub buyers are often pressured by national companies that push a single inflated quote and a same-day discount. That is not how we work. TurnKey is locally owned, we give you a fixed-price guaranteed quote with no hidden fees, and a real person answers when you call. No scripts, no bait-and-switch."),
-            ("Cost, financing, and Medicare", "A walk-in tub is a meaningful investment, and we are upfront about it. In most cases, Original Medicare does not cover walk-in tubs. We make it manageable with 0% financing and a fixed-price guaranteed quote, so you know the full cost before we begin and can spread it across flexible monthly payments."),
-            ("Licensed, insured, and guaranteed", "TurnKey Bath Remodel is fully licensed and insured: Residential #890459, Commercial #3667. We back acrylic products with a lifetime guarantee and our work with a 10-year workmanship guarantee, and we bring 25 years of local experience to every install."),
-            ("Also: standard bathtub replacement", "Not looking for a walk-in tub? We also replace standard bathtubs, with the same fixed-price quote and fast installation. Ask about it at your consultation."),
-            ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore."),
+            ("Why a walk-in tub", "Most falls at home happen in the bathroom, and stepping over a high tub wall is one of the biggest risks. A walk-in tub replaces that step-over with a low, sealed door you walk through. Ours include a built-in seat, grab bars, anti-slip flooring, and easy-reach controls, so a bath is something to look forward to again, not something to fear.", "images-finished-bath/PHOTO-2023-11-14-12-50-49_c.jpg"),
+            ("Add a shower to your walk-in tub", "Prefer the option to shower as well as soak? We install walk-in tubs with a shower, so you get both in one space. We will walk you through the choices at your free consultation.", "images-finished-bath/PHOTO-2023-11-14-12-51-01_b.jpg"),
+            ("Made to fit older New Orleans homes", "New Orleans bathrooms, especially in older and historic homes, can be tight. Because we are local and remodel these homes every week, we measure and plan your walk-in tub around your actual space during the free in-home consultation, so you know it fits before anything is ordered.", "images-finished-bath/PHOTO-2023-11-14-12-51-01_a.jpg"),
+            ("A local team, not a high-pressure national chain", "Walk-in tub buyers are often pressured by national companies that push a single inflated quote and a same-day discount. That is not how we work. TurnKey is locally owned, we give you a fixed-price guaranteed quote with no hidden fees, and a real person answers when you call. No scripts, no bait-and-switch.", "images-finished-bath/PHOTO-2023-11-14-12-50-50_c.jpg"),
+            ("Cost, financing, and Medicare", "A walk-in tub is a meaningful investment, and we are upfront about it. In most cases, Original Medicare does not cover walk-in tubs. We make it manageable with 0% financing and a fixed-price guaranteed quote, so you know the full cost before we begin and can spread it across flexible monthly payments.", "images-finished-bath/PHOTO-2023-11-14-12-50-48.jpg"),
+            ("Licensed, insured, and guaranteed", "TurnKey Bath Remodel is fully licensed and insured: Residential #890459, Commercial #3667. We back acrylic products with a lifetime guarantee and our work with a 10-year workmanship guarantee, and we bring 25 years of local experience to every install.", "images-finished-bath/PHOTO-2023-11-14-12-51-02.jpg"),
+            ("Also: standard bathtub replacement", "Not looking for a walk-in tub? We also replace standard bathtubs, with the same fixed-price quote and fast installation. Ask about it at your consultation.", "images-finished-bath/IMG_3186.jpg"),
+            ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore.", "images-finished-bath/IMG_3187.jpg"),
         ],
         "faqs": [
             ("Does Medicare cover a walk-in tub?", "In most cases, Original Medicare does not cover walk-in tubs. We offer 0% financing and a fixed-price guaranteed quote so the cost fits your budget."),
@@ -167,9 +167,17 @@ def render_form(page):
 
 
 def render_page(slug, data):
+    def _section(i, h, p, img):
+        alt_cls = " alt" if i % 2 else ""
+        img_first = i % 2 == 1  # alternate: even=text-left/img-right, odd=img-left/text-right
+        text_block = f'<div class="section-text"><h2>{h}</h2><p>{p}</p></div>'
+        img_block = f'<div class="section-img"><img src="{img}" alt="{h} — TurnKey Bath Remodel"></div>'
+        order = (img_block + text_block) if img_first else (text_block + img_block)
+        return f'<section class="body{alt_cls}"><div class="section-inner section-2col">{order}</div></section>'
+
     sections_html = "".join(
-        f'<section class="body{" alt" if i % 2 else ""}"><div class="section-inner"><h2>{h}</h2><p>{p}</p></div></section>'
-        for i, (h, p) in enumerate(data["sections"])
+        _section(i, h, p, img)
+        for i, (h, p, img) in enumerate(data["sections"])
     )
     faqs_html = "".join(
         f'<details class="faq-item"><summary>{q}</summary><div class="faq-answer">{a}</div></details>'
@@ -276,10 +284,15 @@ def render_page(slug, data):
 <!-- BODY SECTIONS -->
 {sections_html}
 
-<!-- VIDEO -->
+<!-- VIDEO GALLERY — all 3 videos -->
 <section class="video-block">
-  <h2>{data["video_heading"]}</h2>
-  <video src="{data["video_src"]}" muted loop playsinline controls poster=""></video>
+  <h2>See the work for yourself</h2>
+  <p class="video-sub">{data["video_heading"]}</p>
+  <div class="video-grid">
+    <video src="page1-video.mp4" muted loop playsinline controls poster=""></video>
+    <video src="page2-video.mp4" muted loop playsinline controls poster=""></video>
+    <video src="page3-video.mp4" muted loop playsinline controls poster=""></video>
+  </div>
 </section>
 
 <!-- TESTIMONIALS -->
