@@ -52,6 +52,15 @@ PAGES = {
             ("0% financing", "A new bathroom should fit your budget, not strain it. We offer 0% financing so you can move forward with flexible monthly payments."),
             ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore."),
         ],
+        "section_imgs": [
+            ("images-finished-bath/IMG_3186.jpg", "Full bathroom remodel by TurnKey, New Orleans"),
+            ("images-finished-bath/IMG_3184.jpg", "Locally owned New Orleans bathroom remodeler"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-22_a.jpg", "Fixed-price bathroom remodel install"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-27.jpg", "Bathroom remodel finished in days, Metairie"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-28.jpg", "Licensed New Orleans bathroom remodeling crew"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-44.jpg", "0% financing bathroom remodel, New Orleans"),
+            ("images-finished-bath/IMG_3187.jpg", "Greater New Orleans bathroom remodel service area"),
+        ],
         "video_after_index": 3,  # insert video block after "Done in days, not weeks"
         "faqs": [
             ("How much does a bathroom remodel cost in New Orleans?", "It depends on the size of the room, the materials you choose, and what your home needs behind the walls. Rather than guess, we give you a fixed-price guaranteed quote at your free consultation, and we offer 0% financing."),
@@ -108,6 +117,16 @@ PAGES = {
             ("What a new shower costs", "The price of a walk-in shower or a tub-to-shower conversion depends on the size of your shower, the materials you choose, and any plumbing updates your home needs. We give you a fixed-price guaranteed quote at your free consultation, and we offer 0% financing so it fits your budget."),
             ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore."),
         ],
+        "section_imgs": [
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-48.jpg", "Walk-in shower install, Greater New Orleans"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-49_a.jpg", "Tub-to-shower conversion by TurnKey"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-49_b.jpg", "Acrylic shower system, no grout to clean"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-49_c.jpg", "Barrier-free shower install, New Orleans"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-50_a.jpg", "Fixed-price shower install quote"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-50_b.jpg", "Licensed New Orleans shower remodeling crew"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-50_c.jpg", "Walk-in shower replacement, Metairie"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-53_a.jpg", "Tub-to-shower conversion service area New Orleans"),
+        ],
         "video_after_index": 2,
         "faqs": [
             ("How much does a tub-to-shower conversion or walk-in shower cost in New Orleans?", "It depends on size, materials, and any plumbing work your home needs. You get a fixed-price guaranteed quote at your free consultation, with 0% financing available."),
@@ -163,6 +182,16 @@ PAGES = {
             ("Licensed, insured, and guaranteed", "TurnKey Bath Remodel is fully licensed and insured: Residential #890459, Commercial #3667. We back acrylic products with a lifetime guarantee and our work with a 10-year workmanship guarantee, and we bring 25 years of local experience to every install."),
             ("Also: standard bathtub replacement", "Not looking for a walk-in tub? We also replace standard bathtubs, with the same fixed-price quote and fast installation. Ask about it at your consultation."),
             ("Service area", "We serve Greater New Orleans and the surrounding metro, including Lakeview, Garden District, Uptown, Metairie, Mandeville, and the Northshore."),
+        ],
+        "section_imgs": [
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-00_a.jpg", "Walk-in tub install for safer bathing"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-00_b.jpg", "Walk-in tub with shower install"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_a.jpg", "Walk-in tub fitted in older New Orleans home"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_b.jpg", "Local walk-in tub installer, no high-pressure sales"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_c.jpg", "Walk-in tub with 0% financing, New Orleans"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_d.jpg", "Licensed walk-in tub install with lifetime guarantee"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_e.jpg", "Standard bathtub replacement, Greater New Orleans"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-02.jpg", "Walk-in tub service area New Orleans metro"),
         ],
         "video_after_index": 1,
         "faqs": [
@@ -314,13 +343,25 @@ def cta_strip():
 
 
 def render_video_block(data):
+    videos = [
+        ("page1-video.mp4", "Bathroom Remodeling Contractor"),
+        ("page2-video.mp4", "Bathtub & Shower Remodeling"),
+        ("page3-video.mp4", "Walk-In Tub Installation"),
+    ]
+    tiles = "".join(
+        f'''<div class="video-tile">
+      <div class="video-wrap">
+        <video src="{src}" muted loop playsinline controls preload="metadata"></video>
+      </div>
+      <div class="video-tile-label">{label}</div>
+    </div>'''
+        for src, label in videos
+    )
     return f'''<section class="video-block">
   <div class="video-inner">
-    <h2>{data["video_heading"]}</h2>
-    <p class="video-sub">{data["video_caption"]}</p>
-    <div class="video-wrap">
-      <video src="{data["video_src"]}" muted loop playsinline controls></video>
-    </div>
+    <h2>See TurnKey bathroom projects come to life</h2>
+    <p class="video-sub">Real installs by our New Orleans team: full remodels, shower conversions, and walk-in tubs.</p>
+    <div class="video-grid">{tiles}</div>
   </div>
 </section>'''
 
@@ -358,13 +399,17 @@ def render_page(slug, data):
         "0% financing available",
     ])
 
-    # Body sections rendered single-column, with periodic CTA strip every 3 sections.
-    # Video block inserts after data["video_after_index"].
+    # Body sections rendered 2-col (text + image), alternating image side per section.
+    # Mobile stacks image above text. Video block inserts after data["video_after_index"].
     body_parts = []
+    section_imgs = data.get("section_imgs", [])
     for i, (h, p) in enumerate(data["sections"]):
+        img_src, img_alt = section_imgs[i] if i < len(section_imgs) else ("", "")
+        flip = " body-section--flip" if i % 2 == 1 else ""
         body_parts.append(
-            f'<section class="body-section"><div class="body-inner">'
-            f'<h2>{h}</h2><p>{p}</p>'
+            f'<section class="body-section{flip}"><div class="body-inner">'
+            f'<div class="body-text"><h2>{h}</h2><p>{p}</p></div>'
+            f'<div class="body-img-wrap"><img class="body-img" src="{img_src}" alt="{img_alt}" loading="lazy"></div>'
             f'</div></section>'
         )
         # Insert video block at the spec-defined position
