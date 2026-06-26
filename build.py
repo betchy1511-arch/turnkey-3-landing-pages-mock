@@ -440,7 +440,7 @@ def render_page(slug, data):
 <title>{data["title_tag"]}</title>
 <meta name="description" content="{data["meta_desc"]}">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
