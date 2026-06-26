@@ -38,6 +38,21 @@ h1, h2, h3 { font-family: 'Outfit', system-ui, sans-serif; line-height: 1.2; }
 .hero ul.bullets li { padding: 8px 0 8px 30px; position: relative; font-size: 16px; color: rgba(255,255,255,.95); }
 .hero ul.bullets li::before { content: '✓'; position: absolute; left: 0; top: 8px; color: var(--blue); font-weight: 800; font-size: 18px; }
 
+/* Hero image — mobile only, sits under H1 (Dimi's "picture under H1" SRT ask) */
+.hero-mobile-img { display: none; }
+@media (max-width: 900px) {
+  .hero-mobile-img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 18px 0 22px;
+    box-shadow: 0 14px 40px rgba(0,0,0,.35);
+  }
+}
+
 .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
 .cta-row a, .cta-row button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 16px; padding: 14px 24px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; }
 .cta-call { background: var(--blue); color: var(--white); }
@@ -208,7 +223,20 @@ section.body.alt .section-2col {
 .test-card p { font-size: 15px; color: #2c3e50; margin-bottom: 12px; font-style: italic; }
 .test-card .author { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; color: var(--navy); }
 .test-card .source { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-@media (max-width: 768px) { .test-grid { grid-template-columns: 1fr; } }
+/* Mobile: horizontal swipeable testimonial slider — Dimi's "scrolling reviews" SRT ask */
+@media (max-width: 768px) {
+  .test-grid {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 4px 4px 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .test-card { flex: 0 0 82%; scroll-snap-align: center; }
+}
 
 /* ===== FAQ ===== */
 .faq-block { padding: 60px 24px; background: var(--gray); }

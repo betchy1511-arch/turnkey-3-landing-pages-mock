@@ -31,6 +31,8 @@ PAGES = {
         "title_tag": "New Orleans Bathroom Remodeling Contractor | TurnKey Bath",
         "meta_desc": "Licensed New Orleans bathroom remodeling contractor. Fixed-price quotes, most projects done in 1 to 3 days, free $250 design consult. Call (504) 784-1784.",
         "h1": "New Orleans Bathroom Remodeling Contractor",
+        "hero_img": "images-finished-bath/IMG_3187.jpg",
+        "hero_img_alt": "Finished bathroom remodel by TurnKey Bath Remodel — New Orleans",
         "badge": "Bathroom Remodeling — Greater New Orleans",
         "subhead": "A licensed, locally owned bathroom remodeling team serving Greater New Orleans. Fixed-price quotes, most projects finished in 1 to 3 days, and a free in-home design consultation worth $250.",
         "above_fold_body": "Looking for a bathroom remodeling contractor in New Orleans who shows up, quotes a fixed price, and finishes on time? TurnKey Bath Remodel is a locally owned company that does one thing: bathrooms. We have remodeled bathrooms across the Greater New Orleans metro for more than 25 years, and we hold a 4.9 Google rating from hundreds of five-star reviews. From your free design consultation through final cleanup, you work with one dedicated team. No subcontractors, no hand-offs, no surprise costs.",
@@ -65,6 +67,8 @@ PAGES = {
         "title_tag": "Bathtub and Shower Remodeling Contractor | New Orleans",
         "meta_desc": "Walk-in showers, shower replacements, and tub-to-shower conversions in New Orleans. Fixed-price quotes, most installs 1 to 3 days. Call (504) 784-1784.",
         "h1": "Bathtub and Shower Remodeling Contractor",
+        "hero_img": "images-finished-bath/PHOTO-2023-11-14-12-50-53_a.jpg",
+        "hero_img_alt": "New walk-in shower install by TurnKey Bath Remodel — New Orleans",
         "badge": "Showers & Tub Conversions — New Orleans",
         "subhead": "New Orleans walk-in showers, shower replacements, and tub-to-shower conversions. Fixed-price quotes, most installs finished in 1 to 3 days, and a free design consultation worth $250.",
         "above_fold_body": "Ready to replace a worn-out shower or convert an old tub into a walk-in shower? TurnKey Bath Remodel installs walk-in showers, shower replacements, and tub-to-shower conversions across New Orleans. We are a locally owned company that does only bathrooms, with a 4.9 Google rating and hundreds of five-star reviews. Our acrylic shower systems have no grout lines to scrub or reseal, which matters in New Orleans humidity. You get a fixed-price quote before we begin, and most installs are finished in 1 to 3 days.",
@@ -100,6 +104,8 @@ PAGES = {
         "title_tag": "Walk-In Tub Installation in New Orleans | TurnKey Bath",
         "meta_desc": "Safe, professionally installed walk-in tubs across New Orleans. Low step-in, built-in seat, grab bars. Free $250 consult, 0% financing. Call (504) 784-1784.",
         "h1": "Walk-In Tub Installation in New Orleans",
+        "hero_img": "images-finished-bath/PHOTO-2023-11-14-12-50-49_c.jpg",
+        "hero_img_alt": "Walk-in tub installation by TurnKey Bath Remodel — New Orleans",
         "badge": "Walk-In Tubs — Greater New Orleans",
         "subhead": "Safer, easier bathing for New Orleans homeowners. Professionally installed walk-in tubs with a low step-in, a built-in seat, and grab bars. Free $250 design consultation, 0% financing, and most installs finished in 1 to 3 days.",
         "above_fold_body": "If getting in and out of the tub has become a daily worry, a walk-in tub can make bathing safe and independent again. TurnKey Bath Remodel installs walk-in tubs across New Orleans with a low step-in threshold, a built-in seat, grab bars, and anti-slip flooring. We are a locally owned company that does only bathrooms, with a 4.9 Google rating and hundreds of five-star reviews. You work with one local team, get a fixed-price quote before we start, and most installs are finished in 1 to 3 days.",
@@ -234,6 +240,7 @@ def render_page(slug, data):
     <div class="hero-left">
       <div class="badge">{data["badge"]}</div>
       <h1>{data["h1"]}</h1>
+      <img class="hero-mobile-img" src="{data["hero_img"]}" alt="{data["hero_img_alt"]}">
       <p class="subhead">{data["subhead"]}</p>
       <ul class="bullets">{bullets_html}</ul>
       <div class="cta-row">
