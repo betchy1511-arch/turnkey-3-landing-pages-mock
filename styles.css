@@ -86,25 +86,79 @@ section.body p { font-size: 17px; color: #2c3e50; margin-bottom: 14px; max-width
 section.body ul { padding-left: 22px; margin-bottom: 14px; }
 section.body ul li { font-size: 17px; color: #2c3e50; margin-bottom: 8px; max-width: 800px; }
 
-/* 2-column section: text + finished-bath photo */
-.section-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1200px; }
-.section-2col .section-text { min-width: 0; position: relative; padding-left: 4px; }
-.section-2col .section-text::before { content: ''; display: block; width: 56px; height: 4px; background: var(--blue); border-radius: 4px; margin-bottom: 18px; }
-.section-2col .section-text h2 { font-size: clamp(28px, 3.2vw, 38px); margin-bottom: 18px; letter-spacing: -.3px; }
-.section-2col .section-text p { max-width: 100%; font-size: 17px; line-height: 1.65; color: #2c3e50; }
-.section-2col .section-img { display: flex; justify-content: center; }
-.section-2col .section-img img { width: 100%; max-width: 480px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; box-shadow: 0 24px 50px rgba(2,31,53,.22), 0 4px 12px rgba(2,31,53,.08); display: block; }
-/* Soft background tint behind image to give the negative space some weight */
-.section-2col .section-img { position: relative; }
-.section-2col .section-img::before { content: ''; position: absolute; inset: -28px -28px -16px -16px; background: linear-gradient(135deg, rgba(77,152,210,.07), rgba(2,31,53,.04)); border-radius: 18px; z-index: 0; }
-.section-2col .section-img img { position: relative; z-index: 1; }
-/* On .alt (gray) sections, swap accent to navy for contrast variety */
-section.body.alt .section-2col .section-text::before { background: var(--navy); }
+/* Body sections become a unified image+text card — no floating white space */
+section.body { padding: 40px 24px; }
+section.body.alt { background: var(--gray); }
+.section-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1150px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(2,31,53,.10), 0 4px 12px rgba(2,31,53,.05);
+  align-items: stretch;
+}
+.section-2col .section-text {
+  padding: 56px 56px 56px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.section-2col .section-text::before {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.section-2col .section-text h2 {
+  font-size: clamp(26px, 2.8vw, 34px);
+  margin-bottom: 18px;
+  letter-spacing: -.3px;
+  line-height: 1.18;
+  color: var(--navy);
+}
+.section-2col .section-text p {
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2c3e50;
+  margin-bottom: 0;
+}
+.section-2col .section-img {
+  position: relative;
+  min-height: 100%;
+  background: var(--gray);
+}
+.section-2col .section-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+/* Alt section: card sits on gray bg, so flip card to a subtle off-white */
+section.body.alt .section-2col {
+  background: var(--white);
+  border-color: transparent;
+  box-shadow: 0 24px 60px rgba(2,31,53,.12), 0 4px 12px rgba(2,31,53,.06);
+}
+/* Reverse image position on every other section so it alternates */
+.section-2col.img-left .section-text { order: 2; }
+.section-2col.img-left .section-img { order: 1; }
 @media (max-width: 900px) {
-  .section-2col { grid-template-columns: 1fr; gap: 28px; max-width: 600px; }
-  .section-2col .section-img { order: -1; }
-  .section-2col .section-img img { max-width: 100%; aspect-ratio: 4 / 3; }
-  .section-2col .section-text::before { margin-bottom: 14px; }
+  .section-2col { grid-template-columns: 1fr; max-width: 560px; }
+  .section-2col .section-img { order: -1 !important; }
+  .section-2col.img-left .section-text,
+  .section-2col.img-left .section-img { order: revert; }
+  .section-2col.img-left .section-img { order: -1; }
+  .section-2col .section-text { padding: 36px 28px; }
+  .section-2col .section-img img { min-height: 280px; aspect-ratio: 4 / 3; }
 }
 
 /* ===== SERVICE GRID ===== */

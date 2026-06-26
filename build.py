@@ -169,11 +169,11 @@ def render_form(page):
 def render_page(slug, data):
     def _section(i, h, p, img):
         alt_cls = " alt" if i % 2 else ""
-        img_first = i % 2 == 1  # alternate: even=text-left/img-right, odd=img-left/text-right
+        img_left = i % 2 == 1
+        card_cls = "section-inner section-2col" + (" img-left" if img_left else "")
         text_block = f'<div class="section-text"><h2>{h}</h2><p>{p}</p></div>'
         img_block = f'<div class="section-img"><img src="{img}" alt="{h} — TurnKey Bath Remodel"></div>'
-        order = (img_block + text_block) if img_first else (text_block + img_block)
-        return f'<section class="body{alt_cls}"><div class="section-inner section-2col">{order}</div></section>'
+        return f'<section class="body{alt_cls}"><div class="{card_cls}">{text_block}{img_block}</div></section>'
 
     sections_html = "".join(
         _section(i, h, p, img)
