@@ -638,3 +638,142 @@ section.above-fold-body .cta-microcopy { color: var(--text-muted); }
 /* Body-section zebra striping (alternate background) */
 .body-section:nth-of-type(odd) { background: var(--white); }
 .body-section:nth-of-type(even) { background: var(--gray); }
+
+/* ===== SERVICES STRIP (dark navy bg, blue-tinted borders) ===== */
+.services-strip {
+  background: var(--navy);
+  color: var(--white);
+  padding: 64px 24px;
+}
+.services-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+.services-strip h2 { color: var(--white); font-size: clamp(26px, 3vw, 32px); margin-bottom: 6px; }
+.services-sub { color: rgba(255,255,255,.7); font-size: 15px; margin-bottom: 36px; font-family: 'Outfit', sans-serif; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.service-card {
+  background: rgba(77,152,210,.08);
+  border: 1px solid rgba(77,152,210,.45);
+  border-radius: 10px;
+  padding: 26px 20px;
+  text-align: left;
+  transition: transform .2s, background .2s, border-color .2s;
+}
+.service-card:hover { transform: translateY(-4px); background: rgba(77,152,210,.18); border-color: var(--blue); }
+.service-card h3 { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.service-card p { font-size: 14px; color: rgba(255,255,255,.78); line-height: 1.55; }
+@media (max-width: 1000px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+
+/* ===== GALLERY (4-col grid + lightbox) ===== */
+.gallery {
+  background: #0c2138;
+  padding: 64px 24px;
+}
+.gallery-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+.gallery h2 { color: var(--white); font-size: clamp(26px, 3vw, 32px); margin-bottom: 6px; }
+.gallery-sub { color: rgba(255,255,255,.7); font-size: 15px; margin-bottom: 30px; font-family: 'Outfit', sans-serif; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.gallery-tile {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: zoom-in;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 6px 18px rgba(0,0,0,.4);
+  transition: transform .25s;
+}
+.gallery-tile:hover { transform: translateY(-3px); }
+.gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 40px;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox-img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,.7); border-radius: 4px; }
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 42px;
+  cursor: pointer;
+  line-height: 1;
+  font-family: 'Outfit', sans-serif;
+}
+.lightbox-close:hover { color: var(--blue); }
+
+/* ===== BOTTOM CTA BLOCK (full-width photo bg + dark gradient overlay) ===== */
+.bottom-cta-block {
+  padding: 90px 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  text-align: center;
+}
+.bottom-cta-inner { max-width: 800px; margin: 0 auto; }
+.bottom-cta-block h2 {
+  color: var(--white);
+  font-size: clamp(26px, 3vw, 34px);
+  margin-bottom: 24px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.5);
+}
+.bottom-cta-block .cta-row { justify-content: center; }
+.bottom-cta-block .cta-microcopy { color: rgba(255,255,255,.85); margin-top: 8px; }
+
+/* ===== POPUP MODAL (nav CTA target) ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.72);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1100;
+  padding: 40px 16px;
+  overflow-y: auto;
+}
+.modal-overlay.open { display: flex; }
+.modal-card {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  margin: auto;
+}
+.modal-card .form-card { position: relative; top: 0; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.modal-close {
+  position: absolute;
+  top: -38px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 36px;
+  cursor: pointer;
+  line-height: 1;
+  font-family: 'Outfit', sans-serif;
+  z-index: 2;
+}
+.modal-close:hover { color: var(--blue); }
+@media (max-width: 560px) {
+  .modal-overlay { padding: 60px 12px 20px; }
+}
+
+/* Nav button as <button> (matches old <a> visual) */
+button.nav-cta-btn { border: none; cursor: pointer; font-family: 'Outfit', sans-serif; }

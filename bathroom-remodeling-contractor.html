@@ -19,7 +19,7 @@
   </div>
   <div class="nav-right">
     <a class="nav-phone" href="tel:+15047841784">(504) 784-1784</a>
-    <a class="nav-cta-btn" href="#quote-form">Get my free quote</a>
+    <button type="button" class="nav-cta-btn" data-open-modal>Get a Free Consultation</button>
   </div>
 </nav>
 
@@ -177,9 +177,44 @@
   </div>
 </section>
 
-<!-- CLOSING CTA -->
-<section class="closing-cta">
-  <div class="closing-inner">
+<!-- SERVICES STRIP (4 dark navy cards, blue-tinted borders) -->
+<section class="services-strip">
+  <div class="services-inner">
+    <h2>Other ways we remodel New Orleans bathrooms</h2>
+    <p class="services-sub">Same fixed-price quote, same local crew, same lifetime acrylic guarantee.</p>
+    <div class="services-grid"><div class="service-card">
+      <h3>Full Bathroom Remodels</h3>
+      <p>Floor-to-ceiling renovations done in 1 to 3 days with one local crew.</p>
+    </div><div class="service-card">
+      <h3>Walk-In Showers</h3>
+      <p>Custom acrylic walk-in showers with no grout to clean or reseal.</p>
+    </div><div class="service-card">
+      <h3>Tub-to-Shower Conversions</h3>
+      <p>Swap that unused tub for a sleek walk-in shower, usually in 1 to 3 days.</p>
+    </div><div class="service-card">
+      <h3>Walk-In Tubs</h3>
+      <p>Low step-in, built-in seat, grab bars. Safer bathing without leaving home.</p>
+    </div></div>
+  </div>
+</section>
+
+<!-- GALLERY (4-col + lightbox) -->
+<section class="gallery">
+  <div class="gallery-inner">
+    <h2>Real New Orleans bathroom projects</h2>
+    <p class="gallery-sub">Tap any photo to view it full size.</p>
+    <div class="gallery-grid"><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/IMG_3184.jpg" data-lightbox-alt="Finished bathroom remodel by TurnKey, New Orleans"><img src="images-finished-bath/IMG_3184.jpg" alt="Finished bathroom remodel by TurnKey, New Orleans" loading="lazy"></button><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/IMG_3186.jpg" data-lightbox-alt="Modern bathroom remodel with new vanity and tile"><img src="images-finished-bath/IMG_3186.jpg" alt="Modern bathroom remodel with new vanity and tile" loading="lazy"></button><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/IMG_3187.jpg" data-lightbox-alt="Bathroom remodel by TurnKey Bath, Greater New Orleans"><img src="images-finished-bath/IMG_3187.jpg" alt="Bathroom remodel by TurnKey Bath, Greater New Orleans" loading="lazy"></button><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/IMG_4687.jpg" data-lightbox-alt="Completed New Orleans bathroom remodel"><img src="images-finished-bath/IMG_4687.jpg" alt="Completed New Orleans bathroom remodel" loading="lazy"></button><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/PHOTO-2023-11-14-12-50-22_a.jpg" data-lightbox-alt="Custom shower install in New Orleans bathroom remodel"><img src="images-finished-bath/PHOTO-2023-11-14-12-50-22_a.jpg" alt="Custom shower install in New Orleans bathroom remodel" loading="lazy"></button><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/PHOTO-2023-11-14-12-50-27.jpg" data-lightbox-alt="Updated bathroom vanity and lighting, Metairie remodel"><img src="images-finished-bath/PHOTO-2023-11-14-12-50-27.jpg" alt="Updated bathroom vanity and lighting, Metairie remodel" loading="lazy"></button><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/PHOTO-2023-11-14-12-50-28.jpg" data-lightbox-alt="Full bathroom renovation finished by TurnKey crew"><img src="images-finished-bath/PHOTO-2023-11-14-12-50-28.jpg" alt="Full bathroom renovation finished by TurnKey crew" loading="lazy"></button><button type="button" class="gallery-tile" data-lightbox-src="images-finished-bath/PHOTO-2023-11-14-12-50-44.jpg" data-lightbox-alt="Walk-in shower install in New Orleans bathroom remodel"><img src="images-finished-bath/PHOTO-2023-11-14-12-50-44.jpg" alt="Walk-in shower install in New Orleans bathroom remodel" loading="lazy"></button></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" alt="">
+</div>
+
+<!-- BOTTOM CTA (full-width photo bg + dark gradient overlay) -->
+<section class="bottom-cta-block" style="background-image: linear-gradient(135deg, rgba(2,31,53,.85) 0%, rgba(7,58,93,.82) 100%), url('images-finished-bath/IMG_3187.jpg');">
+  <div class="bottom-cta-inner">
     <h2>Ready for a bathroom that is built right and priced honestly? Book your free in-home design consultation, a $250 value, or call our team now.</h2>
     <div class="cta-row center">
     <a class="cta-call" href="tel:+15047841784">Call (504) 784-1784</a>
@@ -203,6 +238,41 @@
 <div class="mobile-bar">
   <a class="call" href="tel:+15047841784">Call Now</a>
   <a class="quote" href="#quote-form">Get my free quote</a>
+</div>
+
+<!-- POPUP MODAL (nav CTA target) -->
+<div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    <aside class="form-card" id="quote-form-modal">
+  <h2>Get my free quote</h2>
+  <p class="form-sub">Free $250 in-home design consultation. No high-pressure sales.</p>
+  <form onsubmit="event.preventDefault(); alert('Mock form — dev wires Gravity Forms on the live WP build.');">
+    <label for="m_name">Full name *</label>
+    <input id="m_name" type="text" required>
+    <div class="form-row">
+      <div>
+        <label for="m_phone">Phone *</label>
+        <input id="m_phone" type="tel" required>
+      </div>
+      <div>
+        <label for="m_zip">ZIP code *</label>
+        <input id="m_zip" type="text" required>
+      </div>
+    </div>
+    <label for="m_email">Email (optional)</label>
+    <input id="m_email" type="email">
+    <label for="m_project">Project type *</label>
+    <select id="m_project" required>
+      <option value="">Select one...</option>
+      <option>Full bathroom remodel</option><option>Shower</option><option>Tub-to-shower conversion</option><option>Walk-in tub</option><option>Not sure yet</option>
+    </select>
+    <button type="submit" class="submit-btn">Get my free quote</button>
+    <p class="consent">By submitting, you agree to our <a href="https://www.turnkeybathremodel.com/privacy-policy/" target="_blank">privacy policy</a> and <a href="https://www.turnkeybathremodel.com/terms-and-conditions/" target="_blank">terms</a>. A real person answers, not a machine.</p>
+    <p class="mock-note">MOCK FORM. Dev wires Gravity Forms (clone from /facebook-landing-page-duplicate/) on the live WP build.</p>
+  </form>
+</aside>
+  </div>
 </div>
 
 <script>
@@ -263,6 +333,54 @@
     });
   }, { threshold: 0.4 });
   nums.forEach(n => io.observe(n));
+})();
+
+// Popup modal — Esc + outside-click close, body scroll lock
+(function() {
+  const overlay = document.getElementById('modal-overlay');
+  if (!overlay) return;
+  const closeBtn = overlay.querySelector('.modal-close');
+  const triggers = document.querySelectorAll('[data-open-modal]');
+  const open = () => {
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const close = () => {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+  triggers.forEach(t => t.addEventListener('click', (e) => { e.preventDefault(); open(); }));
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+})();
+
+// Lightbox — click gallery tile to view full size, Esc + outside-click close
+(function() {
+  const lightbox = document.getElementById('lightbox');
+  if (!lightbox) return;
+  const imgEl = lightbox.querySelector('.lightbox-img');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+  const tiles = document.querySelectorAll('.gallery-tile');
+  const open = (src, alt) => {
+    imgEl.src = src;
+    imgEl.alt = alt || '';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const close = () => {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    imgEl.src = '';
+  };
+  tiles.forEach(t => t.addEventListener('click', () => open(t.dataset.lightboxSrc, t.dataset.lightboxAlt)));
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('open')) close(); });
 })();
 </script>
 

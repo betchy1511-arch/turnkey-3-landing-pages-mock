@@ -65,6 +65,23 @@ PAGES = {
             ("images-ba/p1-ba1-before.jpg", "images-ba/p1-ba1-after.jpg", "Full bathroom remodel"),
             ("images-ba/p1-ba2-before.jpg", "images-ba/p1-ba2-after.jpg", "Vanity & tile refresh"),
         ],
+        "services_strip": [
+            ("Full Bathroom Remodels", "Floor-to-ceiling renovations done in 1 to 3 days with one local crew."),
+            ("Walk-In Showers", "Custom acrylic walk-in showers with no grout to clean or reseal."),
+            ("Tub-to-Shower Conversions", "Swap that unused tub for a sleek walk-in shower, usually in 1 to 3 days."),
+            ("Walk-In Tubs", "Low step-in, built-in seat, grab bars. Safer bathing without leaving home."),
+        ],
+        "gallery_imgs": [
+            ("images-finished-bath/IMG_3184.jpg", "Finished bathroom remodel by TurnKey, New Orleans"),
+            ("images-finished-bath/IMG_3186.jpg", "Modern bathroom remodel with new vanity and tile"),
+            ("images-finished-bath/IMG_3187.jpg", "Bathroom remodel by TurnKey Bath, Greater New Orleans"),
+            ("images-finished-bath/IMG_4687.jpg", "Completed New Orleans bathroom remodel"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-22_a.jpg", "Custom shower install in New Orleans bathroom remodel"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-27.jpg", "Updated bathroom vanity and lighting, Metairie remodel"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-28.jpg", "Full bathroom renovation finished by TurnKey crew"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-44.jpg", "Walk-in shower install in New Orleans bathroom remodel"),
+        ],
+        "bottom_cta_bg": "images-finished-bath/IMG_3187.jpg",
     },
     "bathtub-and-shower-remodeling-contractor": {
         "slug": "bathtub-and-shower-remodeling-contractor",
@@ -104,6 +121,23 @@ PAGES = {
             ("images-ba/p2-ba1-before.jpg", "images-ba/p2-ba1-after.jpg", "Walk-in shower replacement"),
             ("images-ba/p2-ba2-before.jpg", "images-ba/p2-ba2-after.jpg", "Tub-to-shower conversion"),
         ],
+        "services_strip": [
+            ("Shower Replacement", "Swap out a worn-out shower for a clean, low-maintenance acrylic system."),
+            ("Tub-to-Shower Conversion", "Lose the unused tub and gain a full walk-in shower, usually in 1 to 3 days."),
+            ("Walk-In & Safety Showers", "Low or no curb, built-in seating, grab bars. Step-free entry done right."),
+            ("Tub Liners & Surrounds", "Acrylic tub liners and surrounds installed over your existing tub in a day."),
+        ],
+        "gallery_imgs": [
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-48.jpg", "Walk-in shower install, Greater New Orleans"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-49_a.jpg", "Acrylic shower system replacing an old tub"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-49_b.jpg", "Tub-to-shower conversion in a New Orleans bathroom"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-49_c.jpg", "Walk-in shower with built-in seat, Metairie"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-50_a.jpg", "Custom walk-in shower replacement"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-50_b.jpg", "Shower replacement install, New Orleans"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-50_c.jpg", "Barrier-free shower install in older New Orleans home"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-50-53_a.jpg", "Finished tub-to-shower conversion by TurnKey crew"),
+        ],
+        "bottom_cta_bg": "images-finished-bath/PHOTO-2023-11-14-12-50-53_a.jpg",
     },
     "walk-in-tub-installation-new-orleans": {
         "slug": "walk-in-tub-installation-new-orleans",
@@ -144,32 +178,52 @@ PAGES = {
             ("images-ba/p3-ba1-before.jpg", "images-ba/p3-ba1-after.jpg", "Walk-in tub install"),
             ("images-ba/p3-ba2-before.jpg", "images-ba/p3-ba2-after.jpg", "Walk-in tub with shower"),
         ],
+        "services_strip": [
+            ("Walk-In Tubs", "Low step-in, built-in seat, grab bars. Safer bathing without leaving home."),
+            ("Walk-In Tub with Shower", "Soak or shower in one unit. Same install crew, same fixed-price quote."),
+            ("Bathtub Replacement", "Standard tub replacements installed fast, with the same upfront pricing."),
+            ("Grab Bars & Safety", "Anti-slip flooring and grab bars added to make any bath safer to use."),
+        ],
+        "gallery_imgs": [
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-00_a.jpg", "Walk-in tub install in older New Orleans home"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-00_b.jpg", "Walk-in tub with built-in seat and grab bars"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_a.jpg", "Low step-in walk-in tub install, Metairie"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_b.jpg", "Walk-in tub with shower combo install"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_c.jpg", "Senior-safe walk-in tub install, Greater New Orleans"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_d.jpg", "Acrylic walk-in tub install by TurnKey crew"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-01_e.jpg", "Walk-in tub install with anti-slip flooring"),
+            ("images-finished-bath/PHOTO-2023-11-14-12-51-02.jpg", "Finished walk-in tub install, New Orleans bathroom"),
+        ],
+        "bottom_cta_bg": "images-finished-bath/PHOTO-2023-11-14-12-51-01_b.jpg",
     },
 }
 
 
-def render_form(page):
+def render_form(page, container_id="quote-form", field_prefix=""):
+    """Render the quote form. Use field_prefix to avoid duplicate IDs when
+    the same form is rendered twice on a page (hero + modal)."""
     opts = "".join(f'<option>{o}</option>' for o in page["form_dropdown_options"])
-    return f'''<aside class="form-card" id="quote-form">
+    p = field_prefix
+    return f'''<aside class="form-card" id="{container_id}">
   <h2>{CTA_LABEL.capitalize()}</h2>
   <p class="form-sub">Free $250 in-home design consultation. No high-pressure sales.</p>
   <form onsubmit="event.preventDefault(); alert('Mock form — dev wires Gravity Forms on the live WP build.');">
-    <label for="name">Full name *</label>
-    <input id="name" type="text" required>
+    <label for="{p}name">Full name *</label>
+    <input id="{p}name" type="text" required>
     <div class="form-row">
       <div>
-        <label for="phone">Phone *</label>
-        <input id="phone" type="tel" required>
+        <label for="{p}phone">Phone *</label>
+        <input id="{p}phone" type="tel" required>
       </div>
       <div>
-        <label for="zip">ZIP code *</label>
-        <input id="zip" type="text" required>
+        <label for="{p}zip">ZIP code *</label>
+        <input id="{p}zip" type="text" required>
       </div>
     </div>
-    <label for="email">Email (optional)</label>
-    <input id="email" type="email">
-    <label for="project">Project type *</label>
-    <select id="project" required>
+    <label for="{p}email">Email (optional)</label>
+    <input id="{p}email" type="email">
+    <label for="{p}project">Project type *</label>
+    <select id="{p}project" required>
       <option value="">Select one...</option>
       {opts}
     </select>
@@ -178,6 +232,61 @@ def render_form(page):
     <p class="mock-note">MOCK FORM. Dev wires Gravity Forms (clone from /facebook-landing-page-duplicate/) on the live WP build.</p>
   </form>
 </aside>'''
+
+
+def render_services_strip(data):
+    cards = "".join(
+        f'''<div class="service-card">
+      <h3>{title}</h3>
+      <p>{desc}</p>
+    </div>'''
+        for title, desc in data["services_strip"]
+    )
+    return f'''<section class="services-strip">
+  <div class="services-inner">
+    <h2>Other ways we remodel New Orleans bathrooms</h2>
+    <p class="services-sub">Same fixed-price quote, same local crew, same lifetime acrylic guarantee.</p>
+    <div class="services-grid">{cards}</div>
+  </div>
+</section>'''
+
+
+def render_gallery(data):
+    tiles = "".join(
+        f'<button type="button" class="gallery-tile" data-lightbox-src="{src}" data-lightbox-alt="{alt}"><img src="{src}" alt="{alt}" loading="lazy"></button>'
+        for src, alt in data["gallery_imgs"]
+    )
+    return f'''<section class="gallery">
+  <div class="gallery-inner">
+    <h2>Real New Orleans bathroom projects</h2>
+    <p class="gallery-sub">Tap any photo to view it full size.</p>
+    <div class="gallery-grid">{tiles}</div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" alt="">
+</div>'''
+
+
+def render_bottom_cta(data):
+    return f'''<section class="bottom-cta-block" style="background-image: linear-gradient(135deg, rgba(2,31,53,.85) 0%, rgba(7,58,93,.82) 100%), url('{data["bottom_cta_bg"]}');">
+  <div class="bottom-cta-inner">
+    <h2>{data["closing"]}</h2>
+    {cta_row("center")}
+  </div>
+</section>'''
+
+
+def render_modal(data):
+    modal_form = render_form(data, container_id="quote-form-modal", field_prefix="m_")
+    return f'''<div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    {modal_form}
+  </div>
+</div>'''
 
 
 def cta_row(extra_class=""):
@@ -299,7 +408,7 @@ def render_page(slug, data):
   </div>
   <div class="nav-right">
     <a class="nav-phone" href="{PHONE_HREF}">{PHONE_DISPLAY}</a>
-    <a class="nav-cta-btn" href="#quote-form">{CTA_LABEL}</a>
+    <button type="button" class="nav-cta-btn" data-open-modal>Get a Free Consultation</button>
   </div>
 </nav>
 
@@ -369,13 +478,14 @@ def render_page(slug, data):
   </div>
 </section>
 
-<!-- CLOSING CTA -->
-<section class="closing-cta">
-  <div class="closing-inner">
-    <h2>{data["closing"]}</h2>
-    {cta_row("center")}
-  </div>
-</section>
+<!-- SERVICES STRIP (4 dark navy cards, blue-tinted borders) -->
+{render_services_strip(data)}
+
+<!-- GALLERY (4-col + lightbox) -->
+{render_gallery(data)}
+
+<!-- BOTTOM CTA (full-width photo bg + dark gradient overlay) -->
+{render_bottom_cta(data)}
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -392,6 +502,9 @@ def render_page(slug, data):
   <a class="call" href="{PHONE_HREF}">Call Now</a>
   <a class="quote" href="#quote-form">{CTA_LABEL}</a>
 </div>
+
+<!-- POPUP MODAL (nav CTA target) -->
+{render_modal(data)}
 
 <script>
 // Before/After split-slider — pointerdown drag + click-to-jump
@@ -451,6 +564,54 @@ def render_page(slug, data):
     }});
   }}, {{ threshold: 0.4 }});
   nums.forEach(n => io.observe(n));
+}})();
+
+// Popup modal — Esc + outside-click close, body scroll lock
+(function() {{
+  const overlay = document.getElementById('modal-overlay');
+  if (!overlay) return;
+  const closeBtn = overlay.querySelector('.modal-close');
+  const triggers = document.querySelectorAll('[data-open-modal]');
+  const open = () => {{
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }};
+  const close = () => {{
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }};
+  triggers.forEach(t => t.addEventListener('click', (e) => {{ e.preventDefault(); open(); }}));
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', (e) => {{ if (e.target === overlay) close(); }});
+  document.addEventListener('keydown', (e) => {{ if (e.key === 'Escape' && overlay.classList.contains('open')) close(); }});
+}})();
+
+// Lightbox — click gallery tile to view full size, Esc + outside-click close
+(function() {{
+  const lightbox = document.getElementById('lightbox');
+  if (!lightbox) return;
+  const imgEl = lightbox.querySelector('.lightbox-img');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+  const tiles = document.querySelectorAll('.gallery-tile');
+  const open = (src, alt) => {{
+    imgEl.src = src;
+    imgEl.alt = alt || '';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }};
+  const close = () => {{
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    imgEl.src = '';
+  }};
+  tiles.forEach(t => t.addEventListener('click', () => open(t.dataset.lightboxSrc, t.dataset.lightboxAlt)));
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => {{ if (e.target === lightbox) close(); }});
+  document.addEventListener('keydown', (e) => {{ if (e.key === 'Escape' && lightbox.classList.contains('open')) close(); }});
 }})();
 </script>
 
