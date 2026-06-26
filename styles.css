@@ -589,6 +589,18 @@ section.above-fold-body .cta-microcopy { color: var(--text-muted); }
   pointer-events: none;
   white-space: nowrap;
 }
+/* Soft vignette to mask any AI watermark in bottom-right corner of slider images */
+.ba-slider::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 110px;
+  height: 90px;
+  background: radial-gradient(ellipse at bottom right, rgba(2, 31, 53, .85) 0%, rgba(2, 31, 53, .55) 35%, rgba(2, 31, 53, .15) 70%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
 .ba-cta { margin-top: 32px; }
 .ba-cta .cta-quote { display: inline-flex; padding: 14px 28px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 16px; border-radius: 8px; text-decoration: none; }
 
