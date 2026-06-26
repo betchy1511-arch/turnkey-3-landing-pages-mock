@@ -569,15 +569,21 @@ section.above-fold-body .cta-microcopy { color: var(--text-muted); }
 .ba-label {
   position: absolute;
   bottom: 14px;
-  left: 14px;
-  right: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 28px);
   text-align: center;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: var(--white);
-  text-shadow: 0 2px 8px rgba(0,0,0,.7);
+  background: rgba(2, 31, 53, .85);
+  padding: 8px 16px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   pointer-events: none;
+  white-space: nowrap;
 }
 .ba-cta { margin-top: 32px; }
 .ba-cta .cta-quote { display: inline-flex; padding: 14px 28px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 16px; border-radius: 8px; text-decoration: none; }
