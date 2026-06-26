@@ -12,7 +12,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Public Sans', system-ui, sans-serif; color: var(--navy); background: var(--white); line-height: 1.55; }
+body { font-family: 'Public Sans', system-ui, sans-serif; color: var(--navy); background: var(--white); line-height: 1.55; counter-reset: section-num; }
 h1, h2, h3 { font-family: 'Outfit', system-ui, sans-serif; line-height: 1.2; }
 
 /* ===== NAV ===== */
@@ -101,79 +101,127 @@ section.body p { font-size: 17px; color: #2c3e50; margin-bottom: 14px; max-width
 section.body ul { padding-left: 22px; margin-bottom: 14px; }
 section.body ul li { font-size: 17px; color: #2c3e50; margin-bottom: 8px; max-width: 800px; }
 
-/* Body sections become a unified image+text card — no floating white space */
-section.body { padding: 40px 24px; }
+/* Body sections — editorial 2-col card with numbered index, denser text panel, no dead space */
+section.body { padding: 36px 24px; }
 section.body.alt { background: var(--gray); }
 .section-2col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1150px;
+  grid-template-columns: 1.15fr 1fr;
+  max-width: 1050px;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(2,31,53,.10), 0 4px 12px rgba(2,31,53,.05);
+  box-shadow: 0 14px 40px rgba(2,31,53,.07);
   align-items: stretch;
+  counter-increment: section-num;
 }
 .section-2col .section-text {
-  padding: 56px 56px 56px 56px;
+  padding: 44px 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 0;
+  position: relative;
 }
+/* Big faded section number — fills top dead space with editorial vibe */
 .section-2col .section-text::before {
-  content: '';
+  content: counter(section-num, decimal-leading-zero);
   display: block;
-  width: 64px;
-  height: 4px;
-  background: var(--blue);
-  border-radius: 4px;
-  margin-bottom: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 1;
+  color: rgba(77,152,210,.22);
+  letter-spacing: -2px;
+  margin-bottom: 18px;
 }
 .section-2col .section-text h2 {
-  font-size: clamp(26px, 2.8vw, 34px);
-  margin-bottom: 18px;
+  font-size: clamp(24px, 2.6vw, 30px);
+  margin-bottom: 14px;
   letter-spacing: -.3px;
-  line-height: 1.18;
+  line-height: 1.2;
   color: var(--navy);
+  position: relative;
+  padding-top: 16px;
+}
+/* Accent bar above H2 (tighter relationship than before) */
+.section-2col .section-text h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 3px;
 }
 .section-2col .section-text p {
   max-width: 100%;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #2c3e50;
+  font-size: 15.5px;
+  line-height: 1.68;
+  color: #3a4d5f;
   margin-bottom: 0;
 }
+/* Per-section mini-CTA — fills bottom dead space, repeats conversion path */
+.section-2col .section-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  align-self: flex-start;
+  color: var(--blue-dark);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--blue);
+  transition: color .15s, border-color .15s, gap .15s;
+}
+.section-2col .section-cta:hover {
+  color: var(--cta-red);
+  border-color: var(--cta-red);
+  gap: 12px;
+}
+.section-2col .section-cta span { font-size: 16px; }
 .section-2col .section-img {
   position: relative;
-  min-height: 100%;
   background: var(--gray);
+  min-height: 300px;
 }
 .section-2col .section-img img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 380px;
   object-fit: cover;
   display: block;
 }
-/* Alt section: card sits on gray bg, so flip card to a subtle off-white */
+/* Alt section: tighter shadow on gray bg */
 section.body.alt .section-2col {
   background: var(--white);
   border-color: transparent;
-  box-shadow: 0 24px 60px rgba(2,31,53,.12), 0 4px 12px rgba(2,31,53,.06);
+  box-shadow: 0 14px 40px rgba(2,31,53,.10);
 }
 /* Reverse image position on every other section so it alternates */
 .section-2col.img-left .section-text { order: 2; }
 .section-2col.img-left .section-img { order: 1; }
 @media (max-width: 900px) {
   .section-2col { grid-template-columns: 1fr; max-width: 560px; }
-  .section-2col .section-img { order: -1 !important; }
+  .section-2col .section-img { order: -1 !important; min-height: 0; }
   .section-2col.img-left .section-text,
   .section-2col.img-left .section-img { order: revert; }
   .section-2col.img-left .section-img { order: -1; }
-  .section-2col .section-text { padding: 36px 28px; }
-  .section-2col .section-img img { min-height: 280px; aspect-ratio: 4 / 3; }
+  .section-2col .section-text { padding: 32px 26px 30px; }
+  .section-2col .section-text::before { font-size: 42px; margin-bottom: 14px; }
+  .section-2col .section-img {
+    position: relative;
+    aspect-ratio: 4 / 3;
+  }
+  .section-2col .section-img img { position: absolute; }
 }
 
 /* ===== SERVICE GRID ===== */

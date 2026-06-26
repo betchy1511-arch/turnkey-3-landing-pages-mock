@@ -177,7 +177,13 @@ def render_page(slug, data):
         alt_cls = " alt" if i % 2 else ""
         img_left = i % 2 == 1
         card_cls = "section-inner section-2col" + (" img-left" if img_left else "")
-        text_block = f'<div class="section-text"><h2>{h}</h2><p>{p}</p></div>'
+        text_block = (
+            '<div class="section-text">'
+            f'<h2>{h}</h2>'
+            f'<p>{p}</p>'
+            '<a href="#quote-form" class="section-cta">Get your free quote <span>→</span></a>'
+            '</div>'
+        )
         img_block = f'<div class="section-img"><img src="{img}" alt="{h} — TurnKey Bath Remodel"></div>'
         return f'<section class="body{alt_cls}"><div class="{card_cls}">{text_block}{img_block}</div></section>'
 
